@@ -1,38 +1,78 @@
 <?php
 namespace App;
 
-class Contact {
-	
-	private $name = '';
-	public $email = '';
-	
-	
+class Contact
+{
+    /**
+     * @var string
+     */
+    private $name = '';
 
-	public function setName($provided_name){
-		$this->name = $provided_name;
-		return $this;
-	}
+    /**
+     * @var string
+     */
+    public $email = '';
+    
+    
 
-
-	public function setEmail($provided_mail){
-		$this->email = $provided_mail;
-		return $this;
-	}
-
-
-	public function printName(){
-		$output = $this->name . ' ' . $this->email;
-		return $output;
-	}
-
-
-	public function getName(){
-		return $this->name;
-	}
+    /**
+     * setName
+     *
+     * @param  string $provided_name
+     *
+     * @return model for method inline execution
+     */
+    public function setName($provided_name)
+    {
+        $this->name = $provided_name;
+        return $this;
+    }
 
 
-	public function getEmail(){
-		return $this->email;
-	}
+    /**
+     * setEmail
+     *
+     * @param  string $provided_mail
+     *
+     * @return model for method inline execution
+     */
+    public function setEmail($provided_mail)
+    {
+        $this->email = $provided_mail;
+        return $this;
+    }
 
+
+    /**
+     * printName
+     *
+     * @return string Full name and email
+     */
+    public function printName()
+    {
+        $output = $this->name . ' ' . $this->email;
+        return $output;
+    }
+
+
+    /**
+     * getName
+     *
+     * @return string $name
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+
+    /**
+     * getEmail
+     *
+     * @return string $name
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
 }
